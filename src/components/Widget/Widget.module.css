@@ -1,0 +1,48 @@
+.image {
+  width: 30px;
+  height: 30px;
+}
+
+.imageContainer {
+  position: absolute;
+  background: rgb(242, 244, 251);
+  padding: 5px;
+  margin: 2px;
+  top: 0px;
+  left: 0px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  margin: 5px;
+  padding: 10px 15px 10px 15px;
+  font-size: 2rem;
+  display: flex;
+}
+
+.main.info {
+  background: rgb(114, 152, 235);
+  border-left: 3px solid rgb(3, 44, 244);
+}
+.main.warning {
+  background: rgba(233, 245, 111, 0.96);
+  border-left: 3px solid darkkhaki;
+}
+
+.main.error {
+  background: rgb(251, 91, 91);
+  border-left: 3px solid rgb(217, 6, 6);
+}
+.main {
+  color: black;
+  position: relative;
+  width: 500px;
+  border-radius: 4px;
+  margin: 3rem;
+}
+.description {
+  margin-top: -1rem;
+  padding: 10px;
+  text-align: justify;
+}

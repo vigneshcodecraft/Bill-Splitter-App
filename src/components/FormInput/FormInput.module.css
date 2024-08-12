@@ -1,0 +1,15 @@
+.container {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+@media (max-width: 550px) {
+  .container {
+    width: 100%;
+    gap: 32px;
+  }
+}

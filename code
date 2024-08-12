@@ -1,0 +1,101 @@
+// const person = "Vignesh";
+// Greeting element
+// in jsx you can introduce a expression in slot called
+// expression slot {} in the body of the jsx (child), or
+// an attribute needs to supplied.
+// All kebab case attributes will need to be supplied in their
+// camelCase counterparts. (Exception are aria symbols, data attributes)
+
+// Greeting is our own custom component. To differentiate
+// where
+// const Greeting = ({ name }: { name: string }) => (
+//   <div
+//     id="container"
+//     style={{
+//       backgroundColor: "red",
+//       marginTop: 10,
+//       display: "flex",
+//       justifyContent: "center",
+//       alignItems: "center",
+//       textAlign: "center",
+//       gap: 8,
+//     }}
+//     data-Id=""
+//     aria-label="Greeting Card"
+//     className="container"
+//   >
+//     <h1>Welcome</h1>
+//     <p>{name}</p>
+//   </div>
+// );
+// const greeting = (
+//   <div>
+//     <Greeting name="Vignesh"></Greeting>
+//     <Greeting name="Shravan"></Greeting>
+//     <Greeting name="Preethesh"></Greeting>
+//   </div>
+// );
+
+// export const Button = ({ color, children }: { color: string; children: string }) => (
+//   <button style={{ border: `1px solid ${color}` }}>{children}</button>
+// );
+
+// const myButton = (
+//   <div
+//     style={{
+//       display: "flex",
+//       gap: 10,
+//     }}
+//   >
+//     <Button color="red">click me</Button>
+//     <Button color="green">click me</Button>
+//     <Button color="blue">click me</Button>
+//   </div>
+// );
+
+// Button
+// should be wrapping the normal html button. But our button will have
+// a border around it. And we should be able to dynamically pass the color
+// of this border as a prop. and the title of the button should be passed
+// as children to this
+// ReactDOM.createRoot(document.getElementById("root")!).render(myButton);
+
+
+    <div>
+        <Widget
+          title="Information"
+          description="In this blog post, I want to focus on the most pertinent details of React Server Components, the stuff we need to know in order to understand the compatibility issues with CSS-in-JS frameworks. If you'd like to learn more about React Server Components, though, I have a separate blog post that explores this new world in much more depth:"
+          type="info"
+        ></Widget>
+        <Widget
+          title="Warning"
+          description="In this blog post, I want to focus on the most pertinent details of React Server Components, the stuff we need to know in order to understand the compatibility issues with CSS-in-JS frameworks. If you'd like to learn more about React Server Components, though, I have a separate blog post that explores this new world in much more depth:"
+          type="warning"
+        ></Widget>
+        <Widget
+          title="Error"
+          description="In this blog post, I want to focus on the most pertinent details of React Server Components, the stuff we need to know in order to understand the compatibility issues with CSS-in-JS frameworks. If you'd like to learn more about React Server Components, though, I have a separate blog post that explores this new world in much more depth:"
+          type="error"
+        ></Widget>
+    </div>
+
+const [counter1, setCounter1] = useState<number>(0);
+const [counter2, setCounter2] = useState<number>(0);
+
+  let total;
+  if (isNaN(counter1) || isNaN(counter2)) {
+    total = 0;
+  } else {
+    total = counter1 + counter2;
+  }
+  return (
+    <>
+      <div>
+        <p className={"total-count"}>Total: {total}</p>
+      </div>
+      <div className="counter-container">
+        <Counter count={counter1} setCount={setCounter1} />
+        <Counter count={counter2} setCount={setCounter2} />
+      </div>
+    </>
+  );

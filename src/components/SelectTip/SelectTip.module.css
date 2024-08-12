@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-color: white;
+  width: 100%;
+}
+
+.labelName {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: #5d6b6c;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.inputContainer {
+  width: 100%;
+  border-radius: 6px;
+  background-color: var(--input-bg-color);
+  color: var(--customInput-text-color);
+  font-family: var(--font-family);
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: right;
+  padding: 0;
+  padding-right: 1rem;
+  border: 2px solid #26c2ad;
+  outline: none;
+}
+
+@media (max-width: 550px) {
+  .labelName {
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+  }
+  .buttonContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .inputContainer {
+    border-radius: 4px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .labelName {
+    font-size: 1rem;
+  }
+  .buttonContainer {
+    gap: 10px;
+  }
+}

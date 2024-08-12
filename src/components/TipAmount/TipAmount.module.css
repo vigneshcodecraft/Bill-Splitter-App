@@ -1,0 +1,59 @@
+.container {
+  background-color: inherit;
+  font-family: inherit;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  letter-spacing: 0.093em;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  letter-spacing: 10%;
+  color: #feffff;
+}
+
+.person {
+  color: #9fb3b2;
+}
+.value {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1.5;
+  color: #2cc0ad;
+  letter-spacing: normal;
+}
+
+@media (max-width: 550px) {
+  .labelContainer {
+    font-size: 0.765rem;
+  }
+  .text {
+    font-size: 0.765rem;
+  }
+  .value {
+    font-size: 1.85rem;
+  }
+  .container {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .labelContainer {
+    font-size: 1rem;
+  }
+  .value {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,84 @@
+:root {
+  /* NUMBERiNPUT */
+  --label-color: #5d6b6c;
+  --number-input-color: #084643;
+  --error-color: #d6765d;
+  --input-focus-outline: 2px solid #5aa79d;
+  --input-bg-color: #f3f8fb;
+
+  /* RESET BUTTON */
+  --inactive-resetBtn-bg-color: #0d686d;
+  --active-resetBtn-bg-color: #9fe8df;
+  --resetBtn-text-color: #00474b;
+
+  /* TIP BUTTON */
+  --normalBtn-bg-color: #00474b;
+  --normalBtn-text-color: #feffff;
+  --normalBtn-hover-bg-color: #9fe8df;
+  --normalBtn-hover-text-color: #014946;
+  --customBtn-text-color: #5d6b6c;
+  --customInput-text-color: #084643;
+  --font-family: "Space Mono";
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #c5e4e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  align-items: center;
+  font-family: "Space Mono";
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  color: #00474b;
+}
+.text {
+  text-align: center;
+  padding: 8rem 0 4rem 0;
+}
+
+.splitterContainer {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 4.125rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .text {
+    padding: 40px 0 0 0;
+  }
+  .splitterContainer {
+    gap: 32px;
+    padding: 30px;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    padding: 0%;
+    min-width: 360px;
+  }
+  .text {
+    padding: 40px 0 0 0;
+  }
+  .splitterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+  }
+}

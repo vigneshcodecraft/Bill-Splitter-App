@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+.container {
+  background-color: #00474b;
+  width: 100%;
+  padding: 3.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.billContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.resetButton {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  padding: 12px 0px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  background-color: var(--inactive-resetBtn-bg-color);
+  border: none;
+  color: var(--resetBtn-text-color);
+  width: 100%;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: not-allowed;
+}
+
+.resetButton:hover:not(:disabled) {
+  background-color: #25c2ad;
+  color: #00474b;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .resetButton {
+    font-size: 1.25rem;
+    line-height: 29.62px;
+    width: 100%;
+    border-radius: 4.32px;
+    margin-top: 43px;
+  }
+  .container {
+    width: 100%;
+    padding: 26px;
+    gap: 58px;
+  }
+  .billContainer {
+    gap: 27px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    padding: 35px;
+  }
+}
