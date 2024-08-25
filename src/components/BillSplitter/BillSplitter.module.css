@@ -28,11 +28,9 @@
   background-color: #c5e4e7;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   gap: 2rem;
   align-items: center;
-  font-family: "Space Mono";
+  font-family: var(--font-family);
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: 700;
@@ -66,7 +64,7 @@
     padding: 30px;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .container {
     padding: 0%;
     min-width: 360px;
