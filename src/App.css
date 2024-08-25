@@ -76,6 +76,18 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c5e4e7;
+}
+@media (max-width: 550px) {
+  #root,
+  #__next {
+    min-height: 0;
+  }
 }
 
 /* #root {
