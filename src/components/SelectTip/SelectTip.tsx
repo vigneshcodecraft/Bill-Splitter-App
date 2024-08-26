@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import "../../App.css";
-import styles from "./SelectTip.module.css";
 import { TipButton } from "../TipButton/TipButton";
+
 interface SelectTipProps {
   label: string;
   values: string[];
@@ -25,20 +23,22 @@ export function SelectTip({
     setCustomInputVisible(true);
   }
 
-  function handleCustomBlur(e: any) {
+  function handleCustomBlur(e: React.ChangeEvent<HTMLInputElement>) {
     if (e.target.value === "") setCustomInputVisible(false);
   }
 
   return (
-    <div className={styles.container}>
-      <label className={styles.labelName}>{label}</label>
-      <div className={styles.buttonContainer}>
+    <div className="bg-white w-full h-full mb-16 mt-14 sm-max:mb-8 sm:mt-8 sm-max:w-full">
+      <label className="font-mono font-bold text-xl leading-6 text-custom-light-grey sm-max:text-sm">
+        {label}
+      </label>
+      <div className="grid grid-cols-3 gap-6 w-full mt-[1.5rem] sm-max:grid-cols-2 sm-max:gap-4 sm-max:mt-4">
         {values.map((value) =>
           value === "Custom" ? (
             isCustomInputVisible ? (
               <input
                 type="text"
-                className={styles.inputContainer}
+                className="w-full rounded-md bg-custom-label-background text-custom-light-grey font-mono text-2xl leading-6 font-bold text-center border-2 border-custom-tiffany-blue outline-none sm-max:rounded-sm sm-max:text-xl"
                 onChange={handleCustomInput}
                 onBlur={handleCustomBlur}
               />
@@ -49,7 +49,7 @@ export function SelectTip({
                 key={value}
                 onClick={handleCustomClick}
                 selectedTip={selectedTip}
-              ></TipButton>
+              />
             )
           ) : (
             <TipButton

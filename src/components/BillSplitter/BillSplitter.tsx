@@ -1,8 +1,6 @@
 import React, { useReducer, useRef, useState } from "react";
-import styles from "./BillSplitter.module.css";
 import { FormInput } from "../FormInput/FormInput";
 import { FormDisplay } from "../FormDisplay/FormDisplay";
-
 import { reducer, initialState } from "../../reducer";
 
 export function BillSplitter() {
@@ -72,34 +70,28 @@ export function BillSplitter() {
 
   const disableButton =
     state.billValue !== 0 || state.personCount !== 1 || state.selectedTip !== 0;
-  return (
-    <div className={styles.container}>
-      <div className={styles.text}>
-        <div>SPLI</div>
-        <div>TTER</div>
-      </div>
 
-      <div className={styles.splitterContainer}>
-        <FormInput
-          billValue={state.billValue}
-          personValue={state.personCount}
-          error={error}
-          handleChange={handleInputChange}
-          setTipValue={(selectedTip: number) =>
-            dispatch({ type: "SET_TIP", payload: selectedTip })
-          }
-          handleCustomInput={handleCustomInput}
-          selectedTip={state.selectedTip}
-          isCustomInputVisible={isCustomInputVisible}
-          setCustomInputVisible={setCustomInputVisible}
-        />
-        <FormDisplay
-          resetValues={resetValues}
-          tipAmount={tipAmount}
-          totalAmount={totalAmount}
-          disableButton={disableButton}
-        />
-      </div>
+  return (
+    <div className="grid grid-cols-2 w-full border-box gap-16 sm-max:flex sm-max:flex-col sm-max:w-full sm-max:gap-[2rem]">
+      <FormInput
+        billValue={state.billValue}
+        personValue={state.personCount}
+        error={error}
+        handleChange={handleInputChange}
+        setTipValue={(selectedTip: number) =>
+          dispatch({ type: "SET_TIP", payload: selectedTip })
+        }
+        handleCustomInput={handleCustomInput}
+        selectedTip={state.selectedTip}
+        isCustomInputVisible={isCustomInputVisible}
+        setCustomInputVisible={setCustomInputVisible}
+      />
+      <FormDisplay
+        resetValues={resetValues}
+        tipAmount={tipAmount}
+        totalAmount={totalAmount}
+        disableButton={disableButton}
+      />
     </div>
   );
 }
